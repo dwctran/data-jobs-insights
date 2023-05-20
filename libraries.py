@@ -124,7 +124,7 @@ def create_donut(df, edu_level):
     )
     fig.update_layout(
         {
-            "font_family": "Helvetica",
+            "font_family": "Inter",
             "legend": {
                 "orientation": "h",
                 "yanchor": "top",
