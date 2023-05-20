@@ -180,7 +180,7 @@ def create_map(map_df):
     data = go.Choroplethmapbox(
         geojson=lga_json,
         locations=map_df.index,
-        z=map_df.proportion,
+        z=map_df["proportion"],
         text=map_df["new_places"],
         colorbar=dict(thickness=20, ticklen=1, tickformat=".0%", outlinewidth=0),
         marker_line_width=1,
