@@ -88,7 +88,7 @@ def main():
     ]
     edu_level = ["phd", "master", "bachelor", "msc"]
 
-    col1, col2, col3, col4 = st.columns([1, 2, 2, 2])
+    col1, col2, col3 = st.columns([1, 2, 2])
     with col1:
         query = st.selectbox(
             "Select Role:",
@@ -111,15 +111,15 @@ def main():
         op_fig = create_chart_from_dict(operation, title)
         pack_fig = create_chart_from_dict(package, title)
         donut = create_donut(title, edu_level)
-        map_fig = create_map(create_map_data(df))
+#         map_fig = create_map(create_map_data(df))
         with col2:
             st.write(donut)
             st.write(op_fig)
         with col3:
             st.write(pack_fig)
             st.write(tech_fig)
-        with col4:
-            st.write(map_fig)
+#         with col4:
+#             st.write(map_fig)
 
     if query == "Data Analyst":
         plot_charts(data, "Data Analyst")
