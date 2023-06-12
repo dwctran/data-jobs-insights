@@ -145,7 +145,7 @@ def create_donut(df, edu_level):
 # Create map data
 
 
-def create_map_data(df):
+def create_map_data(df, query):
     new_places = []
     for place in df.place:
         if "Ho Chi Minh" in place:
