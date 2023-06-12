@@ -157,6 +157,7 @@ def create_map_data(df):
         else:
             new_places.append("Hà Nội")
     df["new_places"] = new_places
+    df = df[df["title"] == query]
     proportion = pd.DataFrame(df.new_places.value_counts(normalize=True)).reset_index()
     map_df = vietnam.merge(proportion, how="left", on="new_places")
     map_df = map_df[["id", "new_places", "geometry", "proportion"]]
