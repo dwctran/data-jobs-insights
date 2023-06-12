@@ -111,7 +111,7 @@ def main():
         op_fig = create_chart_from_dict(operation, title)
         pack_fig = create_chart_from_dict(package, title)
         donut = create_donut(title, edu_level)
-        map_fig = create_map(create_map_data(df))
+        map_fig = create_map(create_map_data(df, query))
         with col2:
             st.write(donut)
             st.write(op_fig)
